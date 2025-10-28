@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import WalletButton from './components/WalletButton';
 import ProposalForm from './components/ProposalForm';
 import ProposalList from './components/ProposalList';
+import BalanceDisplay from './components/BalanceDisplay';
 import useWeb3 from './hooks/useWeb3';
 import './App.css';
 
@@ -12,8 +13,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Playlist DAO</h1>
-        <WalletButton />
+        <h1>SoundSage</h1>
+        <div className="header-right">
+          <BalanceDisplay />
+          <WalletButton />
+        </div>
       </header>
 
       <main>
