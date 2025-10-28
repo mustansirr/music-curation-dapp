@@ -1,0 +1,1 @@
+import pkg from 'hardhat'; const { ethers } = pkg; async function main() { const [signer] = await ethers.getSigners(); console.log('Deploying with account:', await signer.getAddress()); const balance = await ethers.provider.getBalance(await signer.getAddress()); console.log('Account balance:', ethers.formatEther(balance), 'ETH'); } main();
